@@ -51,14 +51,9 @@ public class PixelPropsUtils {
             "com.google.pixel.livewallpaper",
             "com.google.android.apps.safetyhub",
             "com.google.android.apps.turbo",
-            "com.google.android.apps.wallpaper",
             "com.google.android.apps.maps",
             "com.google.android.gms",
-            "com.google.android.apps.nexuslauncher",
-            "com.amazon.avod.thirdpartyclient",
-            "com.disney.disneyplus",
-            "com.netflix.mediaclient",
-            "in.startv.hotstar"
+            "com.google.android.apps.nexuslauncher"
     };
 
     private static final String[] packagesToChangePixelXL = {
@@ -73,10 +68,10 @@ public class PixelPropsUtils {
         propsToChange = new HashMap<>();
         propsToChange.put("BRAND", "google");
         propsToChange.put("MANUFACTURER", "Google");
-        propsToChange.put("DEVICE", "raven");
-        propsToChange.put("PRODUCT", "raven");
-        propsToChange.put("MODEL", "Pixel 6 Pro");
-        propsToChange.put("FINGERPRINT", "google/raven/raven:12/SQ1D.211205.017/7955197:user/release-keys");
+        propsToChange.put("DEVICE", "redfin");
+        propsToChange.put("PRODUCT", "redfin");
+        propsToChange.put("MODEL", "Pixel 5");
+        propsToChange.put("FINGERPRINT", "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys");
         propsToChangePixelXL = new HashMap<>();
         propsToChangePixelXL.put("BRAND", "google");
         propsToChangePixelXL.put("MANUFACTURER", "Google");
@@ -90,7 +85,7 @@ public class PixelPropsUtils {
         propsToChangePixel3XL.put("DEVICE", "crosshatch");
         propsToChangePixel3XL.put("PRODUCT", "crosshatch");
         propsToChangePixel3XL.put("MODEL", "Pixel 3 XL");
-        propsToChangePixel3XL.put("FINGERPRINT", "google/crosshatch/crosshatch:11/RQ3A.211001.001/7641976:user/release-keys");
+        propsToChangePixel3XL.put("FINGERPRINT", "google/crosshatch/crosshatch:12/SP1A.210812.015/7679548:user/release-keys");
     }
 
     public static void setProps(String packageName) {
@@ -133,7 +128,7 @@ public class PixelPropsUtils {
         }
         // Set proper indexing fingerprint
         if (packageName.equals("com.google.android.settings.intelligence")){
-            setPropValue("FINGERPRINT", Build.FINGERPRINT);
+            setPropValue("FINGERPRINT", Build.DOT_FINGERPRINT);
         }
     }
 
